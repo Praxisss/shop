@@ -89,6 +89,7 @@ function addToCart(desc, price, img){
     cart.append(cartItem)
     cartItem.getElementsByClassName('remove')[0].addEventListener('click', remove)
     cartItem.getElementsByClassName('quant')[0].addEventListener('change', changequant)
+    
 }
 
 
@@ -161,15 +162,17 @@ function storageSave(){
     
 }
 function storageLoad(){
-    var a = document.getElementById('cart')
-    var b = localStorage.getItem('cart')
-    a.innerHTML = b
-    var rembtn = document.getElementsByClassName('remove')
-    for(let i = 0; i < rembtn.length; i++){
-        document.getElementsByClassName('remove')[i].addEventListener('click', remove)
-    }
-    var quantup = document.getElementsByClassName('quant')
-    for(let i = 0; i < quantup.length; i++){
-        document.getElementsByClassName('quant')[i].addEventListener('change', changequant)
+    if(localStorage.getItem('cart') != null){
+        var a = document.getElementById('cart')
+        var b = localStorage.getItem('cart')
+        a.innerHTML = b
+        var rembtn = document.getElementsByClassName('remove')
+        for(let i = 0; i < rembtn.length; i++){
+            document.getElementsByClassName('remove')[i].addEventListener('click', remove)
+        }
+        var quantup = document.getElementsByClassName('quant')
+        for(let i = 0; i < quantup.length; i++){
+            document.getElementsByClassName('quant')[i].addEventListener('change', changequant)
+        }
     }
 }
