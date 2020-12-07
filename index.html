@@ -1,0 +1,174 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soft-shop</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="./js/script.js" defer></script>
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <link rel="shortcut icon" href="assets/blue sqr.png" type="image/x-icon">
+    <meta name="description" content="Pillows online market">
+    </head>
+    <body>
+    <nav id="nav">
+        <br><br>
+        <a href='#intro'>To the top</a><br><br>
+        <a href="#about">About</a><br><br>
+        <a href="#prod">Products</a><br><br>
+        <a href="#contacts">Contacts</a><br><br>
+        <a href="#footer">Footer</a>
+    </nav>
+    <div id="cart" class="cart" style="overflow-y:scroll;">
+        <div class="cartCont">
+        </div>
+        <div class="totaldiv">
+            <span>Total: $</span>
+            <span class="total">0</span>
+        </div>
+    </div>
+    <div id="shownav" onclick="shownav()">&#8801;</div>
+    <div id="showcart" onclick="showcart()"><i style='font-size:24px' class='fas'>&#xf07a;</i></div>
+    <div id="intro">
+        <img src="assets/header.jpg" alt="">
+        <p>Soft-shop</p>
+    </div>
+    <div id="about">
+        <h1>About us</h1>
+        <img src="/assets/about.jpg" alt="">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores quibusdam repudiandae, laboriosam, odio, officiis nisi tempora sint nemo inventore ab quo modi dolor ratione quos. Voluptatem molestias a, dolor nam pariatur eaque tempore reprehenderit quos placeat assumenda illum asperiores beatae ab aliquam quisquam, dignissimos facere ullam, nulla sed. Ex quos praesentium sapiente perferendis, in error voluptatum impedit maiores! Unde distinctio autem maiores quasi accusamus necessitatibus sunt velit architecto consequuntur, similique ea totam amet minus culpa rerum dolorem nostrum officia, obcaecati recusandae. Officia, in tempore doloribus facilis odit quod! Excepturi impedit minus ea itaque. Vitae voluptatem et nesciunt beatae debitis alias.</p>
+        <div id="contacts">
+            <h1>Contacts</h1>
+            <p>Phone number: +380507581367</p>
+            <p>Address: Ukraine</p>
+            <p>Name: Alex</p>
+        </div>
+    </div>
+    <h1 id="prod">Products</h1>
+    <div id="main">
+            <div id="filter">
+                <input type="text" id="search" onkeyup="search()">
+                <p>Pillows by shape</p>
+                <input type="checkbox" name="pillform" id="roundpill" value="roundpill" onclick="filterbox('round')">
+                <label for="roundpill">Round pillows</label>
+                <br>
+                <input type="checkbox" name="pillform" id="tripill" value="tripill" onclick="filterbox('tri')">
+                <label for="tripill">Triangle pillows</label>
+                <br>
+                <input type="checkbox" name="pillform" id="sqrpill" value="sqrpill" onclick="filterbox('sqr')">
+                <label for="sqrpill">Square pillows</label>
+                <br><br>
+                <p>Pillows by color</p>
+                <input type="radio" name="pillcolor" id="multcolor" value="multcolor" onclick="filteradio('mult')">
+                <label for="multcolor">Multicolor</label>
+                <br>
+                <input type="radio" name="pillcolor" id="redpill" value="redpill" onclick="filterbox('red')">
+                <label for="redpill">Red</label>
+                <br>
+                <input type="radio" name="pillcolor" id="greenpill" value="greenpill" onclick="filterbox('green')">
+                <label for="greenpill">Green</label>
+                <br>
+                <input type="radio" name="pillcolor" id="bluepill" value="bluepill" onclick="filterbox('blue')">
+                <label for="bluepill">Blue</label>
+                <br>
+                <input type="radio" name="pillcolor" id="BlWhitPill" value="BlWhitPill" onclick="filteradio('wb')">
+                <label for="BlWhitPill">Black/White</label>
+                <br>
+            </div>
+            <div id="container">
+                <div id="item1" class="item sqr wb">
+                    <img class="itemimg" src="/assets/white sqr.jpg" alt=""><br>
+                    <p class="desc">White Square pillow</p>
+                    <span id="price" class="priceEl">$5</span>
+                    <button class="addToCart">Add to cart</button>
+                </div>
+                <div id="item2" class="item wb tri" >
+                    <img class="itemimg" src="/assets/black tri.jpg" alt=""><br>
+                    <p class="desc">Black Triangle pillow</p>
+                    <span id="price" class="priceEl">$5</span>
+                    <button class="addToCart">Add to cart</button>
+                </div>
+                <div id="item3" class="item wb round">
+                    <img class="itemimg" src="/assets/white round.jpg" alt=""><br>
+                    <p class="desc">White Round pillow</p>
+                    <span id="price" class="priceEl">$5</span>
+                    <button class="addToCart">Add to cart</button>
+                </div>
+                <div id="item4" class="item green round">
+                    <img class="itemimg"  src="/assets/green round.jpg" alt=""><br>
+                    <p class="desc" >Green Round pillow</p>
+                    <span id="price" class="priceEl">$5</span>
+                    <button class="addToCart">Add to cart</button>
+                </div>
+                <div id="item5" class="item green sqr">
+                    <img class="itemimg" src="/assets/green sqr.jpg" alt=""><br>
+                    <p class="desc">Green Square pillow</p>
+                    <span id="price" class="priceEl">$5</span>
+                    <button class="addToCart">Add to cart</button>
+                </div>
+                <div id="item6" class="item green tri">
+                    <img class="itemimg" src="/assets/green tri.jpg" alt=""><br>
+                    <p class="desc">Green Triangle pillow</p>
+                    <span id="price" class="priceEl">$5</span>
+                    <button class="addToCart">Add to cart</button>
+                </div>
+                <div id="item7" class="item blue round">
+                    <img class="itemimg" src="/assets/blue round.jpg" alt=""><br>
+                    <p class="desc">Blue Round pillow</p>
+                    <span id="price" class="priceEl">$5</span>
+                    <button class="addToCart">Add to cart</button>
+                </div>
+                <div id="item8" class="item blue sqr">
+                    <img class="itemimg" src="/assets/blue sqr.png" alt=""><br>
+                    <p class="desc">Blue Square pillow</p>
+                    <span id="price" class="priceEl">$5</span>
+                    <button class="addToCart">Add to cart</button>
+                </div>
+                <div id="item9" class="item blue tri">
+                    <img class="itemimg" src="/assets/blue tri.png" alt=""><br>
+                    <p class="desc">Blue Triangle pillow</p>
+                    <span id="price" class="priceEl">$5</span>
+                    <button class="addToCart">Add to cart</button>
+                </div>
+                <div id="item10" class="item red round">
+                    <img class="itemimg" src="/assets/red round.jpg" alt=""><br>
+                    <p class="desc">Red Round pillow</p>
+                    <span id="price" class="priceEl">$5</span>
+                    <button class="addToCart">Add to cart</button>
+                </div>
+                <div id="item11" class="item red sqr">
+                    <img class="itemimg" src="/assets/red sqr.jpg" alt=""><br>
+                    <p class="desc">Red Square pillow</p>
+                    <span id="price" class="priceEl">$5</span>
+                    <button class="addToCart">Add to cart</button>
+                </div>
+                <div id="item12" class="item red tri">
+                    <img class="itemimg" src="/assets/red tri.jpg" alt=""><br>
+                    <p class="desc">Red Triangle pillow</p>
+                    <span id="price" class="priceEl">$5</span>
+                    <button class="addToCart">Add to cart</button>
+                </div>
+                <div id="item13" class="item mult round">
+                    <img class="itemimg" src="/assets/mult round.jpg" alt=""><br>
+                    <p class="desc">Multicolor Round pillow</p>
+                    <span id="price" class="priceEl">$5</span>
+                    <button class="addToCart">Add to cart</button>
+                </div>
+                <div id="item14" class="item mult sqr">
+                    <img class="itemimg" src="/assets/mult sqr.jpg" alt=""><br>
+                    <p class="desc">Multicolor Square pillow</p>
+                    <span id="price" class="priceEl">$5</span>
+                    <button class="addToCart">Add to cart</button>
+                </div>
+                <div id="item15" class="item mult tri">
+                    <img class="itemimg" src="/assets/mult tri.png" alt=""><br>
+                    <p class="desc">Multicolor Triangle pillow</p>
+                    <span id="price" class="priceEl">$5</span>
+                    <button class="addToCart">Add to cart</button>
+                </div>
+            </div>
+    </div>
+    <footer id="footer">
+        <p>&#169;All rights reserved</p>
+    </footer>
+    </body>
+</html>
